@@ -42,8 +42,7 @@ public class dataScrape {
             }
             //Check all adds
             List<WebElement> h3Elements = driver.findElements(By.xpath("//article"));
-            List<WebElement> h3Position = driver.findElements(By.xpath("//h3"));
-            List<WebElement> h3Salary = driver.findElements(By.xpath("//*[@id=\"job_ad_10241525\"]/a/div[2]/div[2]/span/span"));
+
             //Run it through condition
             for (WebElement h3 : h3Elements) {
                 String h3Text = h3.getText();
