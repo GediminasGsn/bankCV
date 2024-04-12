@@ -40,7 +40,7 @@ public class dataScrape {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //Check all adds
+            //Listing all adds
             List<WebElement> h3Elements = driver.findElements(By.xpath("//article"));
 
             //Run it through condition
@@ -48,8 +48,8 @@ public class dataScrape {
                 String h3Text = h3.getText();
                 if (h3Text.contains("QA") || h3Text.contains("automation") || h3Text.contains("engineer") || h3Text.contains("testuotojas")) {
                     System.out.println("");
-                    System.out.println("Position: " + h3.findElement(By.xpath(".//h3")).getText()); // Print position
-                    System.out.println("Salary: " + h3.findElement(By.xpath(".//*[@id=\"job_ad_10241525\"]/a/div[2]/div[2]/span/span")).getText()); //Print salary
+                    System.out.println("Pozicija: " + h3.findElement(By.xpath(".//h3")).getText()); // Print position
+                    System.out.println("Darbo uždarbis: " + h3.findElement(By.xpath("/html/body/div[1]/div/div/main/div/article[1]/a/div[2]/div[2]/span/span")).getText()); //Print salary
                     System.out.println("Skelbimo URL: " + h3.findElement(By.xpath(".//a")).getAttribute("href")); //Print URL
                 }
 
