@@ -49,8 +49,9 @@ public class dataScrape {
                 String h3Text = h3.getText();
                 if (h3Text.contains("QA") || h3Text.contains("automation") || h3Text.contains("engineer") || h3Text.contains("testuotojas")) {
                     System.out.println("");
-                    System.out.println(h3.getText());
-                    System.out.println("Skelbimo URL: " + h3.findElement(By.xpath(".//a")).getAttribute("href"));
+                    System.out.println("Position: " + h3.findElement(By.xpath(".//h3")).getText()); // Print position
+                    System.out.println("Salary: " + h3.findElement(By.xpath(".//*[@id=\"job_ad_10241525\"]/a/div[2]/div[2]/span/span")).getText()); //Print salary
+                    System.out.println("Skelbimo URL: " + h3.findElement(By.xpath(".//a")).getAttribute("href")); //Print URL
                 }
 
             }
