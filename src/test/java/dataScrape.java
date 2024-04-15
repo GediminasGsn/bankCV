@@ -13,6 +13,7 @@ public class dataScrape {
         ChromeDriver driver = new ChromeDriver();
         String url = "https://www.cvbankas.lt/?location%5B%5D=606&padalinys%5B%5D=76&keyw=";
         driver.get(url);
+        driver.manage().window().maximize();
         //accept cookies
         driver.findElement(By.xpath("/html/body/div[18]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
     }
