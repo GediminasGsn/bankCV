@@ -7,10 +7,22 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class dataScrape {
+    @Before
+    public void setUp() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
     @Test
     public void openLandP() {
-        ChromeDriver driver = new ChromeDriver();
+
         String url = "https://www.cvbankas.lt/?location%5B%5D=606&padalinys%5B%5D=76&keyw=";
         driver.get(url);
         driver.manage().window().maximize();
@@ -21,7 +33,7 @@ public class dataScrape {
 
     @Test
     public void scrape() {
-        ChromeDriver driver = new ChromeDriver();
+
         String url = "https://www.cvbankas.lt/?location%5B%5D=606&padalinys%5B%5D=76&keyw=";
         driver.get(url);
         driver.manage().window().maximize();
