@@ -1,19 +1,22 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.util.List;
 
 public class dataScrape {
-    @Before
+    private static ChromeDriver driver;
+
+    @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @After
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
@@ -25,7 +28,6 @@ public class dataScrape {
 
         String url = "https://www.cvbankas.lt/?location%5B%5D=606&padalinys%5B%5D=76&keyw=";
         driver.get(url);
-        driver.manage().window().maximize();
         //accept cookies
         driver.findElement(By.xpath("/html/body/div[18]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
     }
@@ -36,7 +38,6 @@ public class dataScrape {
 
         String url = "https://www.cvbankas.lt/?location%5B%5D=606&padalinys%5B%5D=76&keyw=";
         driver.get(url);
-        driver.manage().window().maximize();
         //accept cookies
         driver.findElement(By.xpath("/html/body/div[18]/div[2]/div[1]/div[2]/div[2]/button[1]")).click();
         //Loop through every page
