@@ -63,7 +63,7 @@ public class dataScrape {
                 if (h3Text.contains("QA") || h3Text.contains("automation") || h3Text.contains("engineer") || h3Text.contains("testuotojas") || h3Text.contains("Junior") || h3Text.contains("Tester") || h3Text.contains("Quality") || h3Text.contains("Assurance")) {
                     System.out.println("");
                     System.out.println("Pozicija: " + h3.findElement(By.xpath(".//h3")).getText()); // Print position
-                    System.out.println("Darbo uždarbis: " + h3.findElement(By.xpath("/html/body/div[1]/div/div/main/div/article[1]/a/div[2]/div[2]/span/span")).getText()); //Print salary
+//                    System.out.println("Darbo uždarbis: " + h3.findElement(By.xpath("/html/body/div[1]/div/div/main/div/article[1]/a/div[2]/div[2]/span/span")).getText()); //Print salary
                     System.out.println("Skelbimo URL: " + h3.findElement(By.xpath(".//a")).getAttribute("href")); //Print URL
                 }
 
