@@ -66,7 +66,7 @@ public class dataScrape {
                     System.out.println("Pozicija: " + h3.findElement(By.xpath(".//h3")).getText()); // Print position
 //                    System.out.println("Darbo uždarbis: " + h3.findElement(By.xpath("/html/body/div[1]/div/div/main/div/article[1]/a/div[2]/div[2]/span/span")).getText()); //Print salary
                     try {
-                        String salary = h3.findElement(By.xpath("/html/body/div[1]/div/div/main/div/article[1]/a/div[2]/div[2]/span/span")).getText(); //Print salary
+                        String salary = h3.findElement(By.xpath("//*/a/div[2]/div[2]/span/span/span")).getText(); //Print salary
                         System.out.println("Darbo uždarbis: " + salary);
                     } catch (NoSuchElementException e) {
                         System.out.println("Darbo uždarbis nematomas");
